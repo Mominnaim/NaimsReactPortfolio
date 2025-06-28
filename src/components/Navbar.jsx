@@ -12,7 +12,7 @@ const NavItems = [
 
 export const NavBar = () => {
     const [isScrolled, setScrolled] = useState(false);
-    const [isMenuOpen, setMenuOpen] = useState(true);
+    const [isMenuOpen, setMenuOpen] = useState(false);
     useEffect(() => {
         const handleScroll = () =>{
             setScrolled(window.screenY > 10)
@@ -29,7 +29,7 @@ export const NavBar = () => {
                 <a href="#hero" className="text-xl font-bold text-primary flex items-center">
                     <span className="relative z-10"> 
                         <span className="text-glow text-foreground">
-                            Naim's Cosmic 
+                            Naim's 
                         </span>
                         {" "}Portfolio
                     </span>
