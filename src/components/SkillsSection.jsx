@@ -1,10 +1,62 @@
 import { useState } from "react"
 import { cn } from "../lib/utils"
 
-const skills =[
-    {name: "HTML/CSS", level: 95, category: "Frontend"},
-    {name: "Express", level: 95, category: "Backend"},
-    {name: "Git", level: 95, category: "Tools"},
+const skills = [
+  // Frontend
+  { name: "HTML/CSS", level: 95, category: "Frontend" },
+  { name: "Tailwind CSS", level: 90, category: "Frontend" },
+  { name: "JavaScript", level: 90, category: "Frontend" },
+  { name: "TypeScript", level: 85, category: "Frontend" },
+  { name: "AngularJS", level: 85, category: "Frontend" },
+  { name: "Bootstrap", level: 80, category: "Frontend" },
+  { name: "React", level: 80, category: "Frontend" },
+  { name: "NextJs", level: 95, category: "Frontend" },
+  
+  // Backend
+  { name: "Express", level: 95, category: "Backend" },
+  { name: "Node.js", level: 85, category: "Backend" },
+  { name: "Django", level: 85, category: "Backend" },
+  { name: "ASP.NET MVC", level: 80, category: "Backend" },
+  { name: "WPF", level: 75, category: "Backend" },
+  { name: "Windows Forms", level: 75, category: "Backend" },
+  { name: "Windows Services", level: 70, category: "Backend" },
+  { name: "C#", level: 50, category: "Backend" },
+
+  // Database
+  { name: "MongoDB", level: 70, category: "Database" },
+  { name: "SQL Server", level: 85, category: "Database" },
+  { name: "SQLite3", level: 80, category: "Database" },
+  { name: "Postgres", level: 50, category: "Database" },
+  { name: "MySQL", level: 80, category: "Database" }, 
+  { name: "Prisma", level: 80, category: "Database" },
+
+  // DevOps / Tools
+  { name: "Git", level: 95, category: "Tools" },
+  { name: "GitHub", level: 90, category: "Tools" },
+  { name: "Azure DevOps", level: 85, category: "Tools" },
+  { name: "Docker", level: 70, category: "Tools" },
+  { name: "Azure App Services", level: 80, category: "Tools" },
+  { name: "CI/CD", level: 70, category: "Tools" },
+  { name: "Jupyter Notebooks", level: 50, category: "Tools" },
+  { name: "IntelliJ IDEA", level: 50, category: "Tools" },
+  { name: "Visual Studio Code", level: 80, category: "Tools" },
+  { name: "Microsoft Excel", level: 50, category: "Tools" },
+
+  // APIs & Architecture
+  { name: "REST APIs", level: 85, category: "Backend" },
+  { name: "SOAP Services", level: 70, category: "Backend" },
+  { name: "MVT Architecture", level: 70, category: "Backend" },
+
+  // Cloud
+  { name: "AWS EC2", level: 50, category: "Cloud" },
+  { name: "AWS S3", level: 50, category: "Cloud" },
+  { name: "AWS Lambda", level: 50, category: "Cloud" },
+
+  // Misc
+  { name: "Stripe", level: 75, category: "Tools" },
+  { name: "Auth0", level: 70, category: "Tools" },
+  { name: "Resend", level: 60, category: "Tools" },
+  { name: "Markdown", level: 50, category: "Tools" },
 ];
 
 const categories = ["all", "Frontend", "Backend", "Tools"]

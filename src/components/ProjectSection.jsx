@@ -8,9 +8,27 @@ const projects = [
         image: "/projects/Cougbay.png",
         tags: ["React", "TailwindCSS", "Supabase"],
         demoUrl: "#",
-        githubUrl: "#",
+        githubUrl: "https://github.com/alakram01/UH_Market_Place",
 
-    }
+    },
+    {
+    id: 2,
+    title: "Forms Request Service",
+    description: "A web app that digitizes UH form requests—like withdrawals, VA benefits, and special petitions—making submission and tracking easier for students.",
+    image: "/projects/FormsReqService.png",
+    tags: ["Django", "SQLite3", "HTML/CSS"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/alijavaidistar/WhiteRock"
+    },
+    {
+    id: 3,
+    title: "Ismaili Professional Network",
+    description: "A professional networking platform where I built scalable, responsive front-end interfaces using AngularJS and Tailwind CSS.",
+    image: "/projects/IpnOnline.png",
+    tags: ["AngularJS", "TypeScript", "TailwindCSS"],
+    demoUrl: "https://ipnonline.net/",
+    githubUrl: "https://ipnonline.net/"
+}
 ]
 
 export const ProjectSection =() => {

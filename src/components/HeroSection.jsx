@@ -11,7 +11,8 @@ export const HeroSection = () => {
                         <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Momin</span>
                     </h1>
                     <p className="text-lf md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                        This is a filler text, will add later
+                        I’m a Computer Science student at the University of Houston with hands-on experience building full-stack web applications using technologies like AngularJS, Django, and .NET. From creating internal tools for businesses to launching platforms for students, 
+                        I focus on building responsive, scalable, and user-centered software.
                         </p>
                         <div className="pt-4 opacity-0 animate-fade-in-delay-4">
                             <a href="#projects" className="cosmic-button">
