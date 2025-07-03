@@ -102,6 +102,41 @@
   }
 }
 
+@layer utilities {
+  @keyframes typewriter {
+    0% {
+      width: 0ch;
+    }
+    50% {
+      width: 19ch; /* Number of characters */
+    }
+    60% {
+      width: 19ch; /* Pause before deleting */
+    }
+    100% {
+      width: 0ch;
+    }
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+
+  .animate-typing {
+    width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    display: inline-block;
+    animation: typewriter 5s steps(20) infinite, blink 0.8s step-end infinite;
+  }
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;

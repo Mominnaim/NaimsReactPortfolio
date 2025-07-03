@@ -6,9 +6,9 @@ export const HeroSection = () => {
             <div className="conatiner max-w-4xl mx-auto text-center z-10">
                 <div className="space-y-6">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                        <span className="opacity-0 animate-fade-in">Hello, I'm</span>
-                        <span className="text-primary opacity-0 animate-fade-in-delay-1"> Naim</span>
-                        <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Momin</span>
+                        <span className="animate-typing text-white">
+                            Hello, I'm <span className="text-primary">Naim</span> <span className="text-gradient">Momin</span>
+                        </span>
                     </h1>
                     <p className="text-lf md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
                         I’m a Computer Science student at the University of Houston with hands-on experience building full-stack web applications using technologies like AngularJS, Django, and .NET. From creating internal tools for businesses to launching platforms for students, 

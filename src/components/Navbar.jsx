@@ -13,16 +13,28 @@ const NavItems = [
 export const NavBar = () => {
     const [isScrolled, setScrolled] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
     useEffect(() => {
-        const handleScroll = () =>{
-            setScrolled(window.screenY > 10)
-        }
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 10) {
+                setIsVisible(false);
+            } else {
+                setIsVisible(true);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
 
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll) 
-    }, []);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY]);
     return (
-        <nav className={cn("fixed w-full z-40 transition-all duration-300",
+        <nav className={cn("fixed top-0 w-full z-40 transition-all duration-300",
+            isVisible ? "translate-y-0" : "-translate-y-full",
             isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
         )}>
             <div className="container flex items-center justify-between">
@@ -55,8 +67,10 @@ export const NavBar = () => {
                 )}>
                     <div className="flex flex-col space-y-8 text-xl">
                         {NavItems.map((item, key) => (
-                            <a key={key} href={item.href}  className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                            onClick={" "}>
+                            <a key={key} 
+                                href={item.href}  
+                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                onClick={() => setMenuOpen(false)}>
                                 {item.name}
                             </a>
                         ))}
