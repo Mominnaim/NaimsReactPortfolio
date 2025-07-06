@@ -16,16 +16,11 @@ const skills = [
   { name: "Express", level: 95, category: "Backend" },
   { name: "Node.js", level: 85, category: "Backend" },
   { name: "Django", level: 85, category: "Backend" },
-  { name: "ASP.NET MVC", level: 80, category: "Backend" },
-  { name: "WPF", level: 75, category: "Backend" },
-  { name: "Windows Forms", level: 75, category: "Backend" },
-  { name: "Windows Services", level: 70, category: "Backend" },
   { name: "C#", level: 50, category: "Backend" },
 
   // Database
   { name: "MongoDB", level: 70, category: "Database" },
   { name: "SQL Server", level: 85, category: "Database" },
-  { name: "SQLite3", level: 80, category: "Database" },
   { name: "Postgres", level: 50, category: "Database" },
   { name: "MySQL", level: 80, category: "Database" }, 
   { name: "Prisma", level: 80, category: "Database" },
@@ -33,14 +28,9 @@ const skills = [
   // DevOps / Tools
   { name: "Git", level: 95, category: "Tools" },
   { name: "GitHub", level: 90, category: "Tools" },
-  { name: "Azure DevOps", level: 85, category: "Tools" },
   { name: "Docker", level: 70, category: "Tools" },
-  { name: "Azure App Services", level: 80, category: "Tools" },
   { name: "CI/CD", level: 70, category: "Tools" },
-  { name: "Jupyter Notebooks", level: 50, category: "Tools" },
-  { name: "IntelliJ IDEA", level: 50, category: "Tools" },
   { name: "Visual Studio Code", level: 80, category: "Tools" },
-  { name: "Microsoft Excel", level: 50, category: "Tools" },
 
   // APIs & Architecture
   { name: "REST APIs", level: 85, category: "Backend" },

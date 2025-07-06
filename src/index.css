@@ -135,6 +135,15 @@
     display: inline-block;
     animation: typewriter 5s steps(20) infinite, blink 0.8s step-end infinite;
   }
+
+  @media (max-width: 400px) {
+    .animate-typing {
+      white-space: normal;
+      width: auto !important;
+      border-right: none;
+      animation: none;
+    }
+  }
 }
 
 @utility container {
