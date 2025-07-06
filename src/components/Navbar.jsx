@@ -35,6 +35,9 @@ export const NavBar = () => {
     }, [lastScrollY]);
 
     useEffect(() => {
+        if (isMenuOpen) {
+            window.scrollTo(0, 0); // scrolls to top when menu opens
+        }
         document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
         return () => {
             document.body.style.overflow = "auto";
@@ -72,7 +75,7 @@ export const NavBar = () => {
                 aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}>
                      {isMenuOpen? <X size={24} /> : <Menu size={24} />}</button>
                 <div className={cn(
-                    "fixed inset-0 bg-white/80 backdrop-blur-md z-40 flex flex-col items-center justify-center",
+                    "fixed inset-0 bg-white/80 backdrop-blur-md z-40 flex flex-col items-center justify-center h-screen overflow-y-auto",
                     "transition-all duration-300 md:hidden", 
                     isMenuOpen 
                     ? "opacity-100 pointer-events-auto" 
@@ -82,7 +85,9 @@ export const NavBar = () => {
                         {NavItems.map((item, key) => (
                             <a key={key} 
                                 href={item.href}  
-                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                                className={cn("hover:text-primary transition-colors duration-300",
+                                    isMenuOpen ? "text-black" : "text-foreground/80"
+                                    )}
                                 onClick={() => setMenuOpen(false)}>
                                 {item.name}
                             </a>
