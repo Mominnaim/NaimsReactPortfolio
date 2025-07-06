@@ -15,6 +15,7 @@ export const NavBar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,6 +33,15 @@ export const NavBar = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, [lastScrollY]);
+
+    useEffect(() => {
+        document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isMenuOpen]);
+
+
     return (
         <nav className={cn("fixed top-0 w-full z-40 transition-all duration-300",
             isVisible ? "translate-y-0" : "-translate-y-full",
@@ -61,9 +71,12 @@ export const NavBar = () => {
                 <button onClick={() => setMenuOpen((prev)=> !prev)} className="md:hidden p-2 text-foreground z-50"
                 aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}>
                      {isMenuOpen? <X size={24} /> : <Menu size={24} />}</button>
-                <div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex-col items-center justify-center",
+                <div className={cn(
+                    "fixed inset-0 bg-white/80 backdrop-blur-md z-40 flex flex-col items-center justify-center",
                     "transition-all duration-300 md:hidden", 
-                    isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                    isMenuOpen 
+                    ? "opacity-100 pointer-events-auto" 
+                    : "opacity-0 pointer-events-none "
                 )}>
                     <div className="flex flex-col space-y-8 text-xl">
                         {NavItems.map((item, key) => (
